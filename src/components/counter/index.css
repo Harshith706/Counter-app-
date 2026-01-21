@@ -1,0 +1,128 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+}
+
+/* FULL SCREEN BACKGROUND WITH INFINITE LOOP */
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(
+        120deg,
+        #1d2671,
+        #c33764,
+        #1d2671
+    );
+    background-size: 300% 300%;
+    animation: gradientLoop 10s ease infinite;
+}
+
+/* BACKGROUND ANIMATION */
+@keyframes gradientLoop {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* GLASS CARD */
+.container {
+    width: 320px;
+    padding: 32px 24px;
+    border-radius: 16px;
+
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+
+    text-align: center;
+    animation: fadeIn 0.8s ease;
+}
+
+/* CARD ENTRY ANIMATION */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* HEADING */
+.heading {
+    font-size: 26px;
+    color: #ffffff;
+    margin-bottom: 12px;
+    letter-spacing: 1px;
+}
+
+/* COUNT */
+.count {
+    font-size: 48px;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 24px;
+    transition: transform 0.2s ease;
+}
+
+/* BUTTON GROUP */
+.button-group {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+}
+
+/* BUTTON BASE */
+.button {
+    flex: 1;
+    padding: 10px 0;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+
+    color: #ffffff;
+    background: rgba(255, 255, 255, 0.25);
+
+    backdrop-filter: blur(6px);
+    transition: all 0.3s ease;
+}
+
+/* HOVER EFFECT */
+.button:hover {
+    transform: translateY(-2px);
+    background: rgba(255, 255, 255, 0.35);
+}
+
+/* ACTIVE (CLICK) EFFECT */
+.button:active {
+    transform: scale(0.95);
+}
+
+/* VARIANTS */
+.increase {
+    border: 1px solid rgba(0, 255, 150, 0.6);
+}
+
+.decrease {
+    border: 1px solid rgba(255, 100, 100, 0.6);
+}
