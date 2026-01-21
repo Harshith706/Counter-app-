@@ -18,16 +18,7 @@ const Counter = () => {
 
     return(
         <div className="app">
-    {/* Background Video */}
-    <video
-        className="bg-video"
-        autoPlay
-        muted
-        loop
-        playsInline
-    >
-        <source src="/infinite_loop_background.mp4" type="video/mp4" />
-    </video>
+  
 
     {/* Glass Card */}
     <div className="container">
